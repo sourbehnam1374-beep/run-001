@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>SHIVA · Tier Markers</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  body { padding: 16px 22px; }
+  table.tier { width: 100%; border-collapse: collapse; font: 12.5px/1.4 var(--font-sans); }
+  table.tier th, table.tier td { padding: 7px 10px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+  table.tier th { background: var(--panel-2); color: var(--muted); font: 600 10.5px/1 var(--font-mono); letter-spacing: 0.06em; text-transform: uppercase; }
+  table.tier tr[data-tier="confirmed"] td:first-child { border-left: 3px solid var(--ok); }
+  table.tier tr[data-tier="context"]   td:first-child { border-left: 3px dashed var(--accent); opacity: .92; }
+  table.tier tr[data-tier="inferred"]  td:first-child { border-left: 3px dotted var(--muted); opacity: .78; font-style: italic; }
+</style>
+</head>
+<body>
+  <table class="tier">
+    <thead><tr><th>Claim</th><th>Tier</th></tr></thead>
+    <tbody>
+      <tr data-tier="confirmed"><td>ICC_avg6 = 0.815 across 29 images</td><td><span class="badge ok">confirmed</span></td></tr>
+      <tr data-tier="context"><td>FH landmarks 2× noisier than S1 corners</td><td><span class="badge ok">context</span></td></tr>
+      <tr data-tier="inferred"><td>Pixel-exact tooling improves precision in this class of substudy</td><td><span class="badge warn">inferred</span></td></tr>
+    </tbody>
+  </table>
+</body>
+</html>

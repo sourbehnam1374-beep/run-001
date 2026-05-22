@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>SHIVA · Strings-to-Infinity Ladder</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  body { padding: 16px 22px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 10px; }
+  .col { display: flex; flex-direction: column; gap: 4px; }
+  .col .k { font: 600 10px/1 var(--font-mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+  .rung {
+    border: 1px solid var(--border); background: var(--chip);
+    border-radius: 7px; padding: 6px 10px;
+    font: 600 12px/1 var(--font-sans);
+    display: flex; align-items: center; gap: 10px;
+    position: relative;
+  }
+  .rung .step { font: 600 9px/1 var(--font-mono); letter-spacing: 0.18em; color: var(--muted); }
+  .arrow-down {
+    position: relative; height: 4px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .arrow-down::after {
+    content: ""; width: 0; height: 0;
+    border-left: 5px solid transparent; border-right: 5px solid transparent;
+    border-top: 5px solid var(--border);
+  }
+</style>
+</head>
+<body>
+  <div class="grid">
+
+    <div class="col"><span class="k">Epistemic</span>
+      <div class="rung"><span class="step">01</span> Observe</div><div class="arrow-down"></div>
+      <div class="rung"><span class="step">02</span> Hypothesize</div><div class="arrow-down"></div>
+      <div class="rung"><span class="step">03</span> Model</div><div class="arrow-down"></div>
+      <div class="rung"><span class="step">04</span> Check</div><div class="arrow-down"></div>
+      <div class="rung"><span class="step">05</span> Decide</div>
+    </div>
+
+    <div class="col"><span class="k">Anchor → Crown</span>
+      <div class="rung"><span class="step">01</span> Anchor</div><div class="arrow-down"></div>
+      <div class="rung"><span class="step">02</span> Leaf</div><div class="arrow-down"></div>
+      <div class="rung"><span class="step">03</span> Stem</div><div class="arrow-down"></div>
+      <div class="rung"><span class="step">04</span> Insight</div><div class="arrow-down"></div>
+      <div class="rung"><span class="step">05</span> Crown</div>
+    </div>
+
+    <div class="col"><span class="k">Pedagogic</span>
+      <div class="rung"><span class="step">01</span> See</div><div class="arrow-down"></div>
+      <div class="rung"><span class="step">02</span> Name</div><div class="arrow-down"></div>
+      <div class="rung"><span class="step">03</span> Link</div><div class="arrow-down"></div>
+      <div class="rung"><span class="step">04</span> Test</div><div class="arrow-down"></div>
+      <div class="rung"><span class="step">05</span> Teach</div>
+    </div>
+
+    <div class="col"><span class="k">Engineering</span>
+      <div class="rung"><span class="step">01</span> Map</div><div class="arrow-down"></div>
+      <div class="rung"><span class="step">02</span> Build</div><div class="arrow-down"></div>
+      <div class="rung"><span class="step">03</span> Log</div><div class="arrow-down"></div>
+      <div class="rung"><span class="step">04</span> Ship</div><div class="arrow-down"></div>
+      <div class="rung"><span class="step">05</span> Learn</div>
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>SHIVA · Badges &amp; Pills</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  body { padding: 22px 26px; }
+  .row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .row + .row { margin-top: 10px; }
+  .k { font: 600 10px/1 var(--font-mono); letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); min-width: 90px; }
+</style>
+</head>
+<body>
+  <div class="row"><span class="k">status</span>
+    <span class="badge ok">pass</span>
+    <span class="badge ok">sealed</span>
+    <span class="badge warn">documented</span>
+    <span class="badge warn">pending</span>
+    <span class="badge bad">fail</span>
+    <span class="badge bad">violation</span>
+  </div>
+  <div class="row"><span class="k">integrity</span>
+    <span class="ipill">JCS</span>
+    <span class="ipill">SHA-256</span>
+    <span class="ipill">Merkle</span>
+    <span class="ipill">DSSE</span>
+    <span class="ipill">Rekor</span>
+    <span class="ipill">RFC6962</span>
+    <span class="ipill">OpenTimestamps</span>
+  </div>
+  <div class="row"><span class="k">family tag</span>
+    <span class="tag static">static</span>
+    <span class="tag dynamic">dynamic</span>
+    <span class="tag relational">relational</span>
+    <span class="tag vital">vital</span>
+  </div>
+</body>
+</html>

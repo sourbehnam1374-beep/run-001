@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>SHIVA · Body & Prose</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  body { padding: 18px 22px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .col { display: flex; flex-direction: column; gap: 6px; }
+  .spec { font: 10.5px/1 var(--font-mono); color: var(--muted); letter-spacing: 0.04em; }
+  .body { font: 400 14px/1.5 var(--font-sans); }
+  .prose { font: 400 0.95rem/1.6 var(--font-sans); }
+  .lead { color: var(--muted); font: 400 14px/1.5 var(--font-sans); }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="col">
+      <span class="spec">body · 14 · 400 · 1.5</span>
+      <span class="body">Single-rater test–retest of the calibration-invariant ratio R across 29 lateral radiographs.</span>
+      <span class="spec" style="margin-top:6px;">lead · 14 · muted · 1.5</span>
+      <span class="lead">The visual language is built on four trait families.</span>
+    </div>
+    <div class="col">
+      <span class="spec">prose · 0.95rem · 1.6</span>
+      <span class="prose">Average-of-6 ICC reaches 0.815 (95% CI 0.60–0.90), with SEM 0.113 and MDC95 0.312. Variance partition: ~42% signal, 0% session drift, ~58% random error.</span>
+    </div>
+  </div>
+</body>
+</html>

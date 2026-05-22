@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>SHIVA · Tuners</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  body { padding: 16px 22px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+  .fig {
+    border: 1px solid var(--border); background: var(--chip);
+    border-radius: 10px; padding: 10px;
+  }
+  .fig .k { font: 600 10px/1 var(--font-mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+  .fig .cap { font: 11px/1.4 var(--font-mono); color: var(--muted); margin-top: 6px; }
+  .fig svg { width: 100%; height: 50px; }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="fig">
+      <div class="k">Thickness ∝ Quantity</div>
+      <svg viewBox="0 0 200 60">
+        <line x1="14" y1="14" x2="186" y2="14" stroke="var(--accent)" stroke-width="1"/>
+        <line x1="14" y1="30" x2="186" y2="30" stroke="var(--accent)" stroke-width="3"/>
+        <line x1="14" y1="48" x2="186" y2="48" stroke="var(--accent)" stroke-width="6"/>
+      </svg>
+      <div class="cap">1 · 3 · 6 units</div>
+    </div>
+    <div class="fig">
+      <div class="k">Opacity ∝ Confidence</div>
+      <svg viewBox="0 0 200 60">
+        <rect x="22" y="14" width="40" height="32" fill="var(--accent)" opacity="0.3"/>
+        <rect x="80" y="14" width="40" height="32" fill="var(--accent)" opacity="0.6"/>
+        <rect x="138" y="14" width="40" height="32" fill="var(--accent)" opacity="1"/>
+      </svg>
+      <div class="cap">low · medium · high</div>
+    </div>
+    <div class="fig">
+      <div class="k">Dash ∝ Polarity</div>
+      <svg viewBox="0 0 200 60">
+        <line x1="14" y1="14" x2="186" y2="14" stroke="var(--accent)" stroke-width="2"/>
+        <line x1="14" y1="30" x2="186" y2="30" stroke="var(--accent)" stroke-width="2" stroke-dasharray="6 4"/>
+        <line x1="14" y1="48" x2="186" y2="48" stroke="var(--accent)" stroke-width="2" stroke-dasharray="2 4"/>
+      </svg>
+      <div class="cap">solid · dashed · dotted</div>
+    </div>
+  </div>
+</body>
+</html>

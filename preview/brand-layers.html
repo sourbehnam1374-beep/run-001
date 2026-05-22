@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>SHIVA · Layers</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  body { padding: 18px 22px; }
+  .layers { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
+  .layer {
+    border: 1px solid var(--border);
+    background: var(--chip);
+    border-radius: 10px;
+    padding: 12px 10px;
+    display: flex; flex-direction: column; gap: 8px;
+    align-items: flex-start;
+  }
+  .layer svg { width: 22px; height: 22px; color: var(--text); }
+  .layer .name { font: 650 13px/1 var(--font-sans); }
+  .layer .role { font: 400 11px/1.35 var(--font-sans); color: var(--muted); }
+  .layer .num  { font: 600 10px/1 var(--font-mono); color: var(--muted); letter-spacing: 0.18em; }
+</style>
+</head>
+<body>
+  <div class="layers">
+    <div class="layer"><span class="num">01</span>
+      <svg viewBox="0 0 24 24" role="img" aria-label="Kernel"><rect x="4" y="4" width="16" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="8" y="8" width="8" height="8" rx="1" fill="currentColor" opacity=".18"/></svg>
+      <div class="name">Kernel</div><div class="role">laws · invariants</div>
+    </div>
+    <div class="layer"><span class="num">02</span>
+      <svg viewBox="0 0 24 24" role="img" aria-label="String"><path d="M2 12 Q 7 4, 12 12 T 22 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <div class="name">String</div><div class="role">atomic primitives</div>
+    </div>
+    <div class="layer"><span class="num">03</span>
+      <svg viewBox="0 0 24 24" role="img" aria-label="Rope"><path d="M3 18 Q 6 18 7 15 Q 8 12 11 12 Q 14 12 15 9 Q 16 6 19 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M3 21 Q 6 21 7 18 Q 8 15 11 15 Q 14 15 15 12 Q 16 9 19 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".55"/></svg>
+      <div class="name">Rope</div><div class="role">composed modules</div>
+    </div>
+    <div class="layer"><span class="num">04</span>
+      <svg viewBox="0 0 24 24" role="img" aria-label="Sheet"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="3" y1="9" x2="21" y2="9" stroke="currentColor" stroke-width="1.2"/><line x1="9" y1="9" x2="9" y2="20" stroke="currentColor" stroke-width="1.2"/><line x1="15" y1="9" x2="15" y2="20" stroke="currentColor" stroke-width="1.2"/></svg>
+      <div class="name">Sheet</div><div class="role">visualizations</div>
+    </div>
+    <div class="layer"><span class="num">05</span>
+      <svg viewBox="0 0 24 24" role="img" aria-label="Snake"><path d="M3 6 Q 8 6 8 11 Q 8 16 13 16 Q 18 16 18 11 Q 18 6 21 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="21" cy="6" r="1.2" fill="currentColor"/></svg>
+      <div class="name">Snake</div><div class="role">adaptive agents</div>
+    </div>
+    <div class="layer"><span class="num">06</span>
+      <svg viewBox="0 0 24 24" role="img" aria-label="Infinity"><path d="M7 12 C 7 7, 12 7, 12 12 C 12 17, 17 17, 17 12 C 17 7, 12 7, 12 12 C 12 17, 7 17, 7 12 Z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+      <div class="name">Infinity</div><div class="role">recursive scaling</div>
+    </div>
+  </div>
+</body>
+</html>

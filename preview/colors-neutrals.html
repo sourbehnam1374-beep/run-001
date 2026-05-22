@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>SHIVA · Text & Lines</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  body { padding: 18px 22px; }
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .col { display: grid; gap: 6px; }
+  .label-row {
+    display: grid; grid-template-columns: 90px 1fr 80px; align-items: center;
+    font: 11px/1.5 var(--font-mono); gap: 10px;
+  }
+  .label-row .k { color: var(--muted); }
+  .label-row .h { color: var(--muted); text-align: right; }
+  .bar { height: 16px; border-radius: 4px; }
+  .text-sample { font: 14px/1.4 var(--font-sans); }
+  .heading-sample { font: 650 16px/1 var(--font-sans); letter-spacing: -0.01em; }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="col">
+      <div class="label-row"><span class="k">text · fg1</span><span class="heading-sample">Inspectable structure</span><span class="h">#E6EDF3</span></div>
+      <div class="label-row"><span class="k">muted · fg2</span><span class="text-sample" style="color:var(--muted)">Caption · kicker text</span><span class="h">#9FB0C4</span></div>
+      <div class="label-row"><span class="k">accent</span><span class="text-sample" style="color:var(--accent)">link / action</span><span class="h">#2563EB</span></div>
+    </div>
+    <div class="col">
+      <div class="label-row"><span class="k">border</span><div class="bar" style="background:#1e293b"></div><span class="h">#1E293B</span></div>
+      <div class="label-row"><span class="k">grid</span><div class="bar" style="background:#1e2940"></div><span class="h">#1E2940</span></div>
+      <div class="label-row"><span class="k">divider</span><div class="bar" style="border-top:1px dashed var(--border); height:1px; align-self:center;"></div><span class="h">dashed 1px</span></div>
+    </div>
+  </div>
+</body>
+</html>

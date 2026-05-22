@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>SHIVA · Motion Kit</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  body { padding: 18px 22px; }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .cell {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--chip);
+    padding: 10px;
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+  }
+  .cell svg { width: 90px; height: 36px; }
+  .cell .nm { font: 600 11px/1 var(--font-mono); }
+  .cell .du { font: 10px/1 var(--font-mono); color: var(--muted); }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="cell">
+      <svg viewBox="0 0 90 36"><line x1="6" y1="18" x2="84" y2="18" stroke="var(--accent)" stroke-width="2.4" class="anim-dash"/></svg>
+      <span class="nm">dash</span><span class="du">10s · flow</span>
+    </div>
+    <div class="cell">
+      <svg viewBox="0 0 90 36"><circle cx="45" cy="18" r="11" fill="var(--accent)" class="anim-pulse"/></svg>
+      <span class="nm">pulse</span><span class="du">1.6s · attention</span>
+    </div>
+    <div class="cell">
+      <svg viewBox="0 0 90 36"><rect x="38" y="10" width="16" height="16" fill="var(--accent)" class="anim-wobble"/></svg>
+      <span class="nm">wobble</span><span class="du">1.8s · unstable</span>
+    </div>
+    <div class="cell">
+      <svg viewBox="0 0 90 36"><circle cx="45" cy="18" r="9" fill="var(--accent)" class="anim-drift"/></svg>
+      <span class="nm">drift</span><span class="du">3s · slow</span>
+    </div>
+    <div class="cell">
+      <svg viewBox="0 0 90 36"><rect x="38" y="10" width="16" height="16" fill="var(--accent)" class="anim-jitter"/></svg>
+      <span class="nm">jitter</span><span class="du">2.4s · noise</span>
+    </div>
+    <div class="cell">
+      <svg viewBox="0 0 90 36"><g class="anim-spin-slow" style="transform-origin:45px 18px"><rect x="42" y="4" width="6" height="28" fill="var(--accent)"/></g></svg>
+      <span class="nm">spin-slow</span><span class="du">18s · cycle</span>
+    </div>
+    <div class="cell">
+      <svg viewBox="0 0 90 36"><circle cx="45" cy="18" r="10" fill="var(--accent)" class="anim-breathe"/></svg>
+      <span class="nm">breathe</span><span class="du">4s · coupling</span>
+    </div>
+    <div class="cell">
+      <svg viewBox="0 0 90 36"><line x1="4" y1="18" x2="86" y2="18" stroke="var(--accent)" stroke-width="2.4" class="anim-flow"/></svg>
+      <span class="nm">flow</span><span class="du">18s · long-range</span>
+    </div>
+  </div>
+</body>
+</html>

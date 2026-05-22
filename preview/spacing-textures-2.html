@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>SHIVA · Textures · Relational & Vital</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  body { padding: 18px 22px; }
+  .group { display: flex; flex-direction: column; gap: 8px; }
+  .group + .group { margin-top: 10px; }
+  .k { font: 600 10px/1 var(--font-mono); letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+  .row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .tex {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    height: 50px;
+    display: flex; align-items: center; justify-content: center;
+    font: 10px/1 var(--font-mono); color: var(--muted);
+    background-color: var(--chip);
+  }
+  .tex span { background: var(--panel); padding: 2px 6px; border-radius: 4px; border: 1px solid var(--border); }
+</style>
+</head>
+<body>
+  <div class="group">
+    <span class="k">relational · lattice · rings · check · tiles</span>
+    <div class="row">
+      <div class="tex bg-lattice"><span>lattice</span></div>
+      <div class="tex bg-rings"><span>rings</span></div>
+      <div class="tex bg-check"><span>check</span></div>
+      <div class="tex bg-tiles"><span>tiles</span></div>
+    </div>
+  </div>
+  <div class="group">
+    <span class="k">vital · cells · radial · cone · dust</span>
+    <div class="row">
+      <div class="tex bg-cells"><span>cells</span></div>
+      <div class="tex bg-radial"><span>radial</span></div>
+      <div class="tex bg-cone"><span>cone</span></div>
+      <div class="tex bg-dust"><span>dust</span></div>
+    </div>
+  </div>
+</body>
+</html>

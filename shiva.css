@@ -1,0 +1,327 @@
+/* ============================================================
+   SHIVA · shiva.css
+   Canonical animation kit, component atoms, textures, diagrams.
+   Pair with colors_and_type.css.
+   ============================================================ */
+
+/* ============================================================
+   ANIMATION KIT — the entire motion vocabulary. Do not invent new keyframes.
+   ============================================================ */
+@keyframes shiva-dash    { to { stroke-dashoffset: -120;  } }
+@keyframes shiva-flow    { to { stroke-dashoffset: -2600; } }
+@keyframes shiva-pulse   { 0%{opacity:.3} 50%{opacity:1} 100%{opacity:.3} }
+@keyframes shiva-wobble  { 0%,100%{transform:translateX(0)} 50%{transform:translateX(4px)} }
+@keyframes shiva-drift   { 0%,100%{transform:translate(0,0)} 50%{transform:translate(6px,-4px)} }
+@keyframes shiva-jitter  { 0%,100%{transform:translate(0,0)} 50%{transform:translate(-1px,1px)} }
+@keyframes shiva-spin    { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+@keyframes shiva-breathe { 0%,100%{transform:scale(1)} 50%{transform:scale(1.04)} }
+@keyframes shiva-orbit   { 0%{transform:rotate(0deg) translateX(60px) rotate(0deg)} 100%{transform:rotate(360deg) translateX(60px) rotate(-360deg)} }
+
+.anim-dash      { stroke-dasharray:6 8;  animation: shiva-dash 10s linear infinite; }
+.anim-flow      { stroke-dasharray:8 12; animation: shiva-flow 18s linear infinite; }
+.anim-pulse     { animation: shiva-pulse 1.6s ease-in-out infinite; }
+.anim-wobble    { animation: shiva-wobble 1.8s ease-in-out infinite; transform-origin: center; }
+.anim-drift     { animation: shiva-drift 3s ease-in-out infinite; }
+.anim-jitter    { animation: shiva-jitter 2.4s linear infinite; }
+.anim-spin-slow { animation: shiva-spin 18s linear infinite; transform-origin: center; }
+.anim-breathe   { animation: shiva-breathe 4s ease-in-out infinite; transform-origin: center; }
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-dash, .anim-flow, .anim-pulse, .anim-wobble, .anim-drift,
+  .anim-jitter, .anim-spin-slow, .anim-breathe { animation: none !important; }
+}
+@media print {
+  .anim-dash, .anim-flow, .anim-pulse, .anim-wobble, .anim-drift,
+  .anim-jitter, .anim-spin-slow, .anim-breathe { animation: none !important; }
+}
+
+/* ============================================================
+   LOGO — conic disc. The canonical brand mark.
+   ============================================================ */
+.shiva-logo {
+  display: inline-block;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: conic-gradient(from 30deg,
+    var(--c-data), var(--c-sci), var(--c-code),
+    var(--c-img),  var(--c-sec),  var(--c-data));
+  box-shadow: 0 0 0 3px rgba(255,255,255,.06);
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   TAGS — family pills (color = family)
+   ============================================================ */
+.tag {
+  display: inline-flex; align-items: center;
+  font: 400 11px/1 var(--font-sans);
+  padding: 2px 8px;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  letter-spacing: var(--tr-meta);
+}
+.tag.static     { color: var(--static);     border-color: var(--static); }
+.tag.dynamic    { color: var(--dynamic);    border-color: var(--dynamic); }
+.tag.relational { color: var(--relational); border-color: var(--relational); }
+.tag.vital      { color: var(--vital);      border-color: var(--vital); }
+
+/* ============================================================
+   STATUS BADGES — bg @ 0.12 · text full saturation
+   ============================================================ */
+.badge {
+  display: inline-flex; align-items: center;
+  font: var(--fw-semi) 11px/1 var(--font-mono);
+  padding: 3px 8px;
+  border-radius: var(--r-pill);
+  letter-spacing: var(--tr-tag);
+}
+.badge.ok   { background: rgba(34,197,94,0.12);  color: var(--ok); }
+.badge.warn { background: rgba(245,158,11,0.12); color: var(--warn); }
+.badge.bad  { background: rgba(239,68,68,0.12);  color: var(--bad); }
+
+/* ============================================================
+   INTEGRITY PILLS — monospace · subtle border · faint green tint
+   ============================================================ */
+.ipill {
+  display: inline-block;
+  font: var(--fw-semi) 10.5px/1 var(--font-mono);
+  padding: 3px 7px;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--border);
+  background: rgba(167,243,208,0.05);
+  color: var(--text);
+  letter-spacing: var(--tr-tag);
+  margin-right: 4px;
+}
+
+/* ============================================================
+   HASH BLOCK
+   ============================================================ */
+.hash-block {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-hash);
+  padding: 12px 14px;
+}
+.hash-block .label {
+  font: var(--fw-semi) 10px/1 var(--font-mono);
+  letter-spacing: var(--tr-mono);
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.hash-block code {
+  font: 11.5px/1.4 var(--font-mono);
+  color: var(--text);
+  word-break: break-all;
+  display: block;
+}
+
+/* ============================================================
+   BUTTON
+   ============================================================ */
+.btn {
+  border: 1px solid var(--border);
+  background: var(--chip);
+  color: var(--text);
+  border-radius: var(--r-pill);
+  padding: 6px 12px;
+  font: var(--fs-small)/1.2 var(--font-sans);
+  cursor: pointer;
+  transition: border-color .15s ease;
+}
+.btn:hover  { border-color: var(--accent); }
+.btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.btn:active { transform: translateY(0.5px); }
+
+.btn.primary {
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+}
+.btn.primary:hover { filter: brightness(1.06); }
+
+/* ============================================================
+   TABS / NAV PILLS
+   ============================================================ */
+.tab {
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-pill);
+  font-size: var(--fs-small);
+  background: var(--chip);
+  color: var(--text);
+  white-space: nowrap;
+  text-decoration: none;
+}
+.tab:hover { border-color: var(--accent); }
+.tab.active { outline: 2px solid rgba(255,255,255,.13); filter: brightness(1.1); border-color: var(--accent); }
+
+/* ============================================================
+   CAPSULE / SECTION CONTAINERS
+   ============================================================ */
+.section {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--r-section);
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+.capsule {
+  background: var(--capsule-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--r-hero);
+  padding: 28px;
+}
+.card {
+  border: 1px solid var(--border);
+  border-radius: var(--r-card);
+  background: var(--chip);
+  padding: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ============================================================
+   FIGURE — three-state interaction model
+   ============================================================ */
+figure.shiva, .shiva-fig {
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--r-card);
+  padding: 10px;
+  background: var(--chip);
+  transition: box-shadow .2s ease, border-color .2s ease;
+}
+figure.shiva:hover, figure.shiva:focus-within,
+.shiva-fig:hover,  .shiva-fig:focus-within {
+  box-shadow: var(--shadow-hover);
+  border-color: var(--accent);
+}
+figure.shiva:hover .edge, figure.shiva:focus-within .edge,
+.shiva-fig:hover .edge,  .shiva-fig:focus-within .edge { stroke: var(--accent); }
+figure.shiva:hover .rope, figure.shiva:focus-within .rope,
+.shiva-fig:hover .rope,  .shiva-fig:focus-within .rope { stroke: var(--c-code); }
+figure.shiva > figcaption, .shiva-fig > figcaption {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 8px;
+  padding-top: 6px;
+  border-top: 1px dashed var(--border);
+}
+
+/* ============================================================
+   CANONICAL SVG CLASSES — use classes, never inline fill/stroke
+   ============================================================ */
+svg.shiva { display: block; width: 100%; height: auto; }
+.box        { fill: var(--panel-2); stroke: var(--border); stroke-width: 1.4; }
+.box.flow   { fill: rgba(96,165,250,0.10); stroke: rgba(96,165,250,0.45); }
+.box.stack  { fill: rgba(245,158,11,0.08); stroke: rgba(245,158,11,0.35); }
+.node       { fill: rgba(96,165,250,0.18); stroke: rgba(125,211,252,0.6); stroke-width: 1.2; }
+.node.core  { fill: rgba(239,68,68,0.20);  stroke: rgba(252,165,165,0.7); }
+.node.mark  { fill: rgba(34,197,94,0.18);  stroke: rgba(134,239,172,0.7); }
+.edge       { stroke: var(--muted); stroke-width: 1.6; fill: none; }
+.edge.moving{ stroke-dasharray: 6 10; animation: shiva-dash 6s linear infinite; }
+.rope       { stroke: var(--accent); stroke-width: 2.2; fill: none; }
+.rope.moving{ stroke-dasharray: 8 12; animation: shiva-flow 8s linear infinite; }
+.arrow      { fill: var(--muted); }
+.label      { font: 12px/1 var(--font-sans); fill: var(--text); }
+.axis       { stroke: var(--grid); stroke-width: 1; }
+
+/* ============================================================
+   TIER MARKERS — knowledge confidence in tables
+   ============================================================ */
+table.tier {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+table.tier th, table.tier td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+table.tier th {
+  background: var(--panel-2);
+  color: var(--muted);
+  font: var(--fw-semi) 11px/1 var(--font-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+table.tier tr[data-tier="confirmed"] td:first-child { border-left: 3px solid var(--ok); }
+table.tier tr[data-tier="context"]   td:first-child { border-left: 3px dashed var(--accent); opacity: 0.92; }
+table.tier tr[data-tier="inferred"]  td:first-child { border-left: 3px dotted var(--muted); opacity: 0.78; font-style: italic; }
+
+/* ============================================================
+   DOMAIN STRIPES — top-of-card category cue (3–4px tall)
+   ============================================================ */
+.stripe { height: 4px; border-radius: 2px; }
+.cat-data     > .stripe { background: linear-gradient(90deg, var(--c-data),    #93c5fd 60%); }
+.cat-scitech  > .stripe { background: linear-gradient(90deg, var(--c-sci),     #86efac 60%); }
+.cat-code     > .stripe { background: linear-gradient(90deg, var(--c-code),    #c4b5fd 60%); }
+.cat-images   > .stripe { background: linear-gradient(90deg, var(--c-img),     #fbd38d 60%); }
+.cat-media    > .stripe { background: linear-gradient(90deg, var(--c-media),   #bbf7d0 60%); }
+.cat-archive  > .stripe { background: linear-gradient(90deg, var(--c-archive), #bae6fd 60%); }
+.cat-docs     > .stripe { background: linear-gradient(90deg, var(--c-docs),    #fbcfe8 60%); }
+.cat-security > .stripe { background: linear-gradient(90deg, var(--c-sec),     #fecaca 60%); }
+.cat-sim      > .stripe { background: linear-gradient(90deg, var(--c-sim),     #fed7aa 60%); }
+.cat-webai    > .stripe { background: linear-gradient(90deg, var(--c-ai),      #a5f3fc 60%); }
+
+/* ============================================================
+   BACKGROUND TEXTURES — light overlays only (rgba .02–.04)
+   Background and family must be coherent.
+   Family→texture pairings:
+     static     → bg-grid · bg-tiles · bg-hatch-thin · bg-stripes-45
+     dynamic    → bg-wave · bg-pulse · bg-bars · bg-stripes-30
+     relational → bg-lattice · bg-rings · bg-check · bg-tiles
+     vital      → bg-cells · bg-radial · bg-cone · bg-dust · bg-moire
+   ============================================================ */
+.bg-stripes-30 { background-image: repeating-linear-gradient(30deg,
+  rgba(127,127,127,.10) 0, rgba(127,127,127,.10) 2px, transparent 2px, transparent 8px); }
+.bg-stripes-45 { background-image: repeating-linear-gradient(45deg,
+  rgba(127,127,127,.10) 0, rgba(127,127,127,.10) 2px, transparent 2px, transparent 8px); }
+.bg-grid { background-image:
+  linear-gradient(0deg, rgba(127,127,127,.08) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(127,127,127,.08) 1px, transparent 1px);
+  background-size: 12px 12px; }
+.bg-dots { background-image: radial-gradient(rgba(127,127,127,.18) 1px, transparent 1px);
+  background-size: 8px 8px; }
+.bg-wave { background-image: repeating-linear-gradient(0deg,
+  rgba(127,127,127,.06) 0, rgba(127,127,127,.06) 1px, transparent 1px, transparent 6px); }
+.bg-radial { background-image: radial-gradient(circle at center, rgba(127,127,127,.18), transparent 60%); }
+.bg-rings { background-image: repeating-radial-gradient(circle at center,
+  rgba(127,127,127,.12) 0, rgba(127,127,127,.12) 1px, transparent 1px, transparent 10px); }
+.bg-lattice { background-image:
+  repeating-linear-gradient(45deg, rgba(127,127,127,.10) 0 1px, transparent 1px 10px),
+  repeating-linear-gradient(-45deg, rgba(127,127,127,.10) 0 1px, transparent 1px 10px); }
+.bg-check { background-image:
+  linear-gradient(45deg, rgba(127,127,127,.12) 25%, transparent 25%),
+  linear-gradient(-45deg, rgba(127,127,127,.12) 25%, transparent 25%);
+  background-size: 10px 10px; }
+.bg-hatch-thin { background-image: repeating-linear-gradient(135deg,
+  rgba(127,127,127,.10) 0, rgba(127,127,127,.10) 1px, transparent 1px, transparent 5px); }
+.bg-steps { background-image: repeating-linear-gradient(180deg,
+  rgba(127,127,127,.08) 0, rgba(127,127,127,.08) 4px, transparent 4px, transparent 12px); }
+.bg-bars { background-image: repeating-linear-gradient(90deg,
+  rgba(127,127,127,.12) 0, rgba(127,127,127,.12) 2px, transparent 2px, transparent 9px); }
+.bg-tiles { background-image:
+  linear-gradient(0deg, rgba(127,127,127,.10) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(127,127,127,.10) 1px, transparent 1px);
+  background-size: 18px 12px; }
+.bg-moire { background-image:
+  repeating-linear-gradient(0deg, rgba(127,127,127,.10) 0 1px, transparent 1px 3px),
+  repeating-linear-gradient(45deg, rgba(127,127,127,.10) 0 1px, transparent 1px 3px); }
+.bg-cells { background-image: radial-gradient(rgba(127,127,127,.16) 2px, transparent 3px);
+  background-size: 14px 14px; }
+.bg-dust { background-image:
+  radial-gradient(rgba(127,127,127,.20) 1px, transparent 1px),
+  radial-gradient(rgba(127,127,127,.10) 1px, transparent 1px);
+  background-size: 7px 7px, 13px 13px;
+  background-position: 0 0, 3px 5px; }
+.bg-pulse { background-image: repeating-radial-gradient(circle at center,
+  rgba(127,127,127,.10) 0, rgba(127,127,127,.10) 2px, transparent 2px, transparent 8px); }
+.bg-cone { background-image: conic-gradient(from 0deg at center,
+  rgba(127,127,127,.18), transparent 30%, rgba(127,127,127,.12) 60%, transparent 90%); }
