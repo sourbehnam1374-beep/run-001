@@ -4,3 +4,13 @@
 !.dev.vars.example
 .env*
 !.env.example
+
+# Private operational artifacts — keep outside this public repository
+/run/
+/runs/
+/validation/
+/ship/
+**/dm-log.md
+**/responses.md
+**/revenue*.json
+**/revenue*.md
