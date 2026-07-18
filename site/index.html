@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SHIVA Design System — a provenance-first visual language for inspectable knowledge artifacts.">
+  <meta name="color-scheme" content="dark light">
+  <title>SHIVA Design System</title>
+  <style>
+    :root {
+      --bg:#070b12; --panel:#0f1724; --chip:#152033; --text:#e8eef8;
+      --muted:#94a3b8; --line:#26354d; --blue:#4f8cff; --orange:#f28c45;
+      --green:#2ecb83; --purple:#ad7bff; --shadow:0 14px 45px rgba(0,0,0,.35);
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg:#f7f9fc; --panel:#fff; --chip:#eef3f9; --text:#101827;
+        --muted:#526176; --line:#d8e1ee; --shadow:0 14px 45px rgba(33,50,75,.12);
+      }
+    }
+    * { box-sizing:border-box; }
+    html { background:var(--bg); color:var(--text); font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; }
+    body { margin:0; min-height:100vh; }
+    .wrap { width:min(1100px,calc(100% - 40px)); margin:auto; padding:28px 0 56px; }
+    header { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:8px 0 52px; }
+    .brand { font:700 13px/1 ui-monospace,SFMono-Regular,Menlo,monospace; letter-spacing:.16em; text-transform:uppercase; }
+    a { color:inherit; }
+    .repo { color:var(--muted); text-underline-offset:4px; }
+    main { display:grid; gap:24px; }
+    .hero,.card { background:var(--panel); border:1px solid var(--line); border-radius:18px; box-shadow:var(--shadow); }
+    .hero { padding:clamp(28px,7vw,72px); position:relative; overflow:hidden; }
+    .hero:before { content:""; position:absolute; inset:0 0 auto; height:4px; background:linear-gradient(90deg,var(--blue),var(--orange),var(--green),var(--purple)); }
+    .kicker { margin:0 0 18px; color:var(--muted); font:600 11px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace; letter-spacing:.16em; text-transform:uppercase; }
+    h1 { max-width:850px; margin:0; font-size:clamp(2.4rem,7vw,5.5rem); line-height:.98; letter-spacing:-.05em; }
+    .lede { max-width:720px; margin:28px 0 0; color:var(--muted); font-size:clamp(1rem,2.2vw,1.25rem); line-height:1.65; }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+    .card { padding:24px; border-radius:14px; box-shadow:none; }
+    .card h2 { margin:0 0 9px; font-size:1rem; }
+    .card p { margin:0 0 22px; color:var(--muted); line-height:1.55; }
+    .card a { display:inline-block; border:1px solid var(--line); border-radius:999px; padding:9px 13px; text-decoration:none; font:600 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace; }
+    .card a:hover,.card a:focus-visible { border-color:var(--blue); outline:none; }
+    footer { display:flex; justify-content:space-between; gap:20px; margin-top:28px; color:var(--muted); font:500 12px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; }
+    @media (max-width:760px) { .grid{grid-template-columns:1fr;} header,footer{align-items:flex-start;flex-direction:column;} }
+    @media (prefers-reduced-motion:reduce) { *,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important;} }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">SHIVA · Design System</div>
+      <a class="repo" href="https://github.com/sourbehnam1374-beep/run-001">Source repository</a>
+    </header>
+    <main>
+      <section class="hero">
+        <p class="kicker">Determinism · Provenance · Inspectable structure</p>
+        <h1>Visual meaning with an audit trail.</h1>
+        <p class="lede">A provenance-first visual language and static HTML component library for inspectable knowledge artifacts. Color encodes family · thickness encodes quantity · opacity encodes confidence.</p>
+      </section>
+      <section class="grid" aria-label="Design-system entry points">
+        <article class="card">
+          <h2>Capsule</h2>
+          <p>Self-contained, offline-viewable knowledge artifacts with explicit provenance and integrity surfaces.</p>
+          <a href="https://github.com/sourbehnam1374-beep/run-001/tree/main/ui_kits/capsule">Inspect capsule kit →</a>
+        </article>
+        <article class="card">
+          <h2>Explorer</h2>
+          <p>A graph-native navigation shell for claims, sources, tuners, selections, and ledger activity.</p>
+          <a href="https://github.com/sourbehnam1374-beep/run-001/tree/main/ui_kits/explorer">Inspect explorer kit →</a>
+        </article>
+        <article class="card">
+          <h2>Specification</h2>
+          <p>Tokens, typography, semantic motion, iconography, accessibility rules, and binding constraints.</p>
+          <a href="https://github.com/sourbehnam1374-beep/run-001#readme">Read specification →</a>
+        </article>
+      </section>
+    </main>
+    <footer><span>Research interface system · active specification</span><span aria-label="Strings, ropes, infinity">〰️ ➰ ♾️</span></footer>
+  </div>
+</body>
+</html>
