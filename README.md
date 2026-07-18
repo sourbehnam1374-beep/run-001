@@ -1,22 +1,22 @@
 # SHIVA Design System
 
-> **Strings → Ropes → Sheets → Snakes → ∞**   〰️➰♾️
-> Determinism · Provenance · Governance · Inspectable Structure
+**A provenance-first visual language and static HTML component library for inspectable knowledge artifacts.**
 
-SHIVA is a **provenance-first, graph-native knowledge operating system** for trusted knowledge and governed action. Its outputs are *capsules* — single-file HTML artifacts that are self-contained, offline-viewable, and iOS-safe — plus a small set of product surfaces (Studio, Graph, Vault, Ledger, Explorer).
+> **Status:** Active design specification and reference implementation. The examples are research and interface artifacts; they are not validated medical devices and must not be used for autonomous clinical decisions.
 
-This repository is the canonical visual + tonal definition. Every visual choice **encodes meaning**: color = family, thickness = quantity, opacity = confidence, dash = polarity, jitter = instability. Motion expresses what the data *is doing*. If a visual move does not carry semantic load, remove it.
+Every visual choice carries meaning: color encodes family, thickness encodes quantity, opacity encodes confidence, dash encodes polarity, and jitter encodes instability. Motion is semantic rather than decorative.
 
----
+## Entry points
 
-## Sources used to build this system
+- [Design tokens](colors_and_type.css)
+- [Component and motion primitives](shiva.css)
+- [Capsule UI kit](ui_kits/capsule/)
+- [Explorer UI kit](ui_kits/explorer/)
+- [Component previews](preview/)
+- [Iconography](ICONOGRAPHY.md)
+- [Reference artifact](reference/SHIVA_design_starter.html)
 
-| Source | Type | Notes |
-|---|---|---|
-| `uploads/SHIVA_design_starter.html` | Single-file design starter (v1, 1499 lines) | Provided by the user. Defines tokens, animation kit, capsule pattern, badge grammar, diagram families, domain stripes, conic logo, 〰️➰♾️ signature. Copied to `reference/`. |
-| `pasted_text` SHIVA DESIGN INSTRUCTIONS v2 | Full-text design spec | 17 sections of binding rules — UTS families, tuner vocabulary, motion kit, three-state figure model, capsule pattern, provenance grammar, four diagram families, domain stripes, logo, signature, voice, constraints, SVG defaults, the Strings-to-Infinity ascent. |
-
-No Figma file, no codebase, no slide decks were provided. UI kits below are recreations of the **Capsule** and **Explorer / Studio shell** patterns inferred from the starter file and spec.
+The deployed Cloudflare surface is intentionally built only from `site/`. Repository documentation, source references, and development files must never be exposed as web assets.
 
 ---
 
@@ -211,6 +211,12 @@ See [`ICONOGRAPHY.md`](./ICONOGRAPHY.md). Short version: **inline SVG only**, se
 | `ui_kits/explorer/` | Explorer / Studio shell — `index.html` is the multi-section navigator with sticky 2-layer header, sidebar (Surfaces + Domains), main column (encyclopedia grid + provenance graph + tuners + ledger), right rail (Selection + Activity). |
 
 ---
+
+## Contributing and security
+
+See [`CONTRIBUTING.md`](CONTRIBUTING.md) before proposing design changes. Report vulnerabilities privately using [`SECURITY.md`](SECURITY.md).
+
+Do not commit patient information, clinical images, buyer identities, payment records, private messages, credentials, tokens, wallet addresses, or live integration URLs. Public examples must be synthetic or clearly public and redistributable.
 
 ## Absolute constraints (binding)
 
