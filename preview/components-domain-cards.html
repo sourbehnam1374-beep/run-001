@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>SHIVA · Domain Stripes (Card Header)</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  body { padding: 16px 22px; }
+  .grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+  .pcard {
+    border: 1px solid var(--border);
+    background: var(--chip);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .pcard .body { padding: 10px 12px; }
+  .pcard h3 { margin: 0; font: 650 12px/1.2 var(--font-sans); }
+  .pcard .meta { font: 11px/1 var(--font-mono); color: var(--muted); margin-top: 4px; }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="pcard cat-data"><div class="stripe"></div><div class="body"><h3>Data</h3><div class="meta">data</div></div></div>
+    <div class="pcard cat-scitech"><div class="stripe"></div><div class="body"><h3>SciTech</h3><div class="meta">scitech</div></div></div>
+    <div class="pcard cat-code"><div class="stripe"></div><div class="body"><h3>Code</h3><div class="meta">code</div></div></div>
+    <div class="pcard cat-images"><div class="stripe"></div><div class="body"><h3>Images</h3><div class="meta">images</div></div></div>
+    <div class="pcard cat-media"><div class="stripe"></div><div class="body"><h3>Media</h3><div class="meta">media</div></div></div>
+    <div class="pcard cat-archive"><div class="stripe"></div><div class="body"><h3>Archive</h3><div class="meta">archive</div></div></div>
+    <div class="pcard cat-docs"><div class="stripe"></div><div class="body"><h3>Docs</h3><div class="meta">docs</div></div></div>
+    <div class="pcard cat-security"><div class="stripe"></div><div class="body"><h3>Security</h3><div class="meta">security</div></div></div>
+    <div class="pcard cat-sim"><div class="stripe"></div><div class="body"><h3>Sim</h3><div class="meta">sim</div></div></div>
+    <div class="pcard cat-webai"><div class="stripe"></div><div class="body"><h3>Web/AI</h3><div class="meta">webai</div></div></div>
+  </div>
+</body>
+</html>

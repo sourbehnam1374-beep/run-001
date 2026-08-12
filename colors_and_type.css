@@ -1,0 +1,268 @@
+/* ============================================================
+   SHIVA · colors_and_type.css
+   Locked palette · canonical type stack · CSS-only motion
+   Strings → Ropes → Sheets → Snakes → ∞   〰️➰♾️
+   ============================================================ */
+
+/* ============================================================
+   1. TYPOGRAPHY — system stack only (no external fonts)
+   ============================================================ */
+:root {
+  /* Font families — system stack. Inline-only; never @import. */
+  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+
+  /* Type scale — capsule and explorer surfaces */
+  --fs-hero:        38px;   /* hero capsule h1 */
+  --fs-h1:          24px;   /* capsule title */
+  --fs-h2:          22px;   /* section title */
+  --fs-h3:          16px;   /* subsection */
+  --fs-h4:          13px;   /* card title */
+  --fs-body:        14px;   /* default prose */
+  --fs-body-lg:     15px;   /* lead / mantra */
+  --fs-prose:      0.95rem; /* capsule body */
+  --fs-small:       12px;
+  --fs-micro:       11px;
+  --fs-kicker:    11.5px;   /* uppercase tiny label */
+  --fs-mono-sm:   11.5px;   /* hash blocks, code */
+
+  /* Weight — Inter weights only */
+  --fw-reg:    400;
+  --fw-med:    500;
+  --fw-semi:   600;
+  --fw-bold:   650;   /* canonical heading weight */
+
+  /* Tracking */
+  --tr-hero:   -0.025em;
+  --tr-h:      -0.02em;
+  --tr-tight:  -0.01em;
+  --tr-body:    0;
+  --tr-kicker:  0.14em;   /* uppercase tiny label */
+  --tr-mono:    0.18em;   /* section-num */
+  --tr-tag:     0.04em;
+  --tr-meta:    0.02em;
+  --tr-glyph:   8px;      /* 〰️➰♾️ signature */
+
+  /* Line height */
+  --lh-body:   1.5;
+  --lh-prose:  1.6;
+  --lh-tight:  1.3;
+  --lh-glyph:  1;
+}
+
+/* ============================================================
+   2. COLOR — DARK (default) and LIGHT themes
+   Every base + semantic value is a CSS var so theme swap is one attribute.
+   ============================================================ */
+:root,
+:root[data-theme="dark"] {
+  /* Surface ladder */
+  --bg:        #0a0d12;   /* page */
+  --panel:     #0d1117;   /* section card */
+  --panel-2:   #151b23;   /* nested panel */
+  --chip:      #0b1220;   /* tag / pill background */
+  --surface:   #02060e;   /* code / hash block */
+
+  /* Text ladder */
+  --text:      #e6edf3;   /* fg1 — primary */
+  --muted:     #9fb0c4;   /* fg2 — secondary, captions, kickers */
+
+  /* Lines & grids */
+  --border:    #1e293b;
+  --grid:      #1e2940;
+
+  /* Default accent (override per-family via .family-card[data-family=...]) */
+  --accent:    #2563eb;
+
+  /* Elevation */
+  --shadow:        0 4px 18px rgba(0,0,0,.28);
+  --shadow-hover:  0 14px 45px rgba(0,0,0,.45);
+
+  /* Hero / capsule background — the ONLY allowed radial gradient */
+  --capsule-bg: radial-gradient(circle at top, #0f1422, #0a0d12 60%);
+}
+
+:root[data-theme="light"] {
+  --bg:        #f9fafb;
+  --panel:     #ffffff;
+  --panel-2:   #f1f5f9;
+  --chip:      #f8fafc;
+  --surface:   #ffffff;
+
+  --text:      #111827;
+  --muted:     #6b7280;
+
+  --border:    #e5e7eb;
+  --grid:      #e5e7eb;
+
+  --accent:    #2563eb;
+
+  --shadow:        0 4px 18px rgba(15,23,42,0.06);
+  --shadow-hover:  0 14px 45px rgba(15,23,42,0.16);
+
+  --capsule-bg: radial-gradient(circle at top, #e5e7eb, #f9fafb 60%);
+}
+
+/* ============================================================
+   3. UTS FAMILY COLORS — semantic, never decorative
+   Color = family. Quantity uses thickness/opacity instead.
+   ============================================================ */
+:root {
+  --static:     #2563eb;   /* intrinsic descriptors (color/size/weight) */
+  --dynamic:    #ea580c;   /* movement, flow, energy */
+  --relational: #16a34a;   /* direction, balance, proportion */
+  --vital:      #9333ea;   /* growth, decay, adaptation, entropy */
+
+  /* Secondary tints (lighter scale companion) */
+  --static-2:     #93c5fd;
+  --dynamic-2:    #fdba74;
+  --relational-2: #86efac;
+  --vital-2:      #c4b5fd;
+}
+
+/* ============================================================
+   4. DOMAIN ACCENTS — 10 canonical hues for taxonomic stripes
+   Used ONLY for category cue. Do not reassign.
+   ============================================================ */
+:root {
+  --c-data:    #60a5fa;   /* data */
+  --c-sci:     #34d399;   /* scitech */
+  --c-code:    #a78bfa;   /* code */
+  --c-img:     #f59e0b;   /* images */
+  --c-media:   #22c55e;   /* media */
+  --c-archive: #38bdf8;   /* archive */
+  --c-docs:    #f472b6;   /* docs */
+  --c-sec:     #ef4444;   /* security */
+  --c-sim:     #f97316;   /* simulation */
+  --c-ai:      #06b6d4;   /* web / ai */
+}
+
+/* ============================================================
+   5. STATUS / PROVENANCE
+   Trust state is always visible. Badge bg = color @ 0.12; text = full.
+   ============================================================ */
+:root {
+  --ok:    #22c55e;     /* pass · sealed · confirmed */
+  --warn:  #f59e0b;     /* documented · pending · inferred */
+  --bad:   #ef4444;     /* fail · violation */
+}
+
+/* ============================================================
+   6. SHAPE & SPACING TOKENS
+   corner radius ∝ softness / forgiveness (sharp = hard rule)
+   ============================================================ */
+:root {
+  --r-pill:    999px;  /* tags · tabs · badges · buttons */
+  --r-card:    12px;   /* card */
+  --r-section: 14px;   /* section */
+  --r-hash:    16px;   /* hash block · capsule body */
+  --r-hero:    18px;   /* hero · capsule outer */
+  --r-sm:      8px;
+  --r-xs:      6px;
+
+  /* Spacing (4px grid) */
+  --s-1:  4px;
+  --s-2:  6px;
+  --s-3:  8px;
+  --s-4:  10px;
+  --s-5:  12px;
+  --s-6:  14px;
+  --s-7:  18px;
+  --s-8:  22px;
+  --s-9:  28px;
+  --s-10: 36px;
+  --s-11: 44px;
+}
+
+/* ============================================================
+   7. SEMANTIC TYPOGRAPHY ROLES
+   Plug-and-play classes for capsules and product surfaces.
+   ============================================================ */
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  font: var(--fs-body)/var(--lh-body) var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.shiva-h1 {
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--tr-h);
+  line-height: var(--lh-tight);
+  margin: 0;
+}
+.shiva-h2 {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--tr-h);
+  line-height: var(--lh-tight);
+  margin: 0;
+}
+.shiva-h3 {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-semi);
+  letter-spacing: var(--tr-tight);
+  margin: 0;
+}
+.shiva-h4 {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--tr-tight);
+  margin: 0;
+}
+.shiva-hero {
+  font-size: var(--fs-hero);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--tr-hero);
+  line-height: var(--lh-tight);
+  margin: 0;
+}
+.shiva-prose {
+  font-size: var(--fs-prose);
+  line-height: var(--lh-prose);
+  color: var(--text);
+}
+.shiva-lead {
+  color: var(--muted);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  max-width: 720px;
+}
+.shiva-kicker {
+  display: inline-block;
+  font: var(--fw-semi) var(--fs-micro)/1 var(--font-mono);
+  letter-spacing: var(--tr-kicker);
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.shiva-section-num {
+  display: inline-block;
+  font: var(--fw-semi) var(--fs-micro)/1 var(--font-mono);
+  color: var(--muted);
+  letter-spacing: var(--tr-mono);
+  text-transform: uppercase;
+}
+.shiva-mono {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono-sm);
+}
+.shiva-glyph {
+  font-size: 28px;
+  letter-spacing: var(--tr-glyph);
+  line-height: var(--lh-glyph);
+}
+.shiva-mantra {
+  color: var(--muted);
+  font-size: var(--fs-body-lg);
+}
+
+/* ============================================================
+   8. FAMILY-SCOPED ACCENT (cascade pattern)
+   Wrap a section/card with .family-card[data-family="..."] to remap --accent.
+   Descendant SVGs that reference var(--accent) inherit automatically.
+   ============================================================ */
+[data-family="static"]     { --accent: var(--static);     --accent-2: var(--static-2); }
+[data-family="dynamic"]    { --accent: var(--dynamic);    --accent-2: var(--dynamic-2); }
+[data-family="relational"] { --accent: var(--relational); --accent-2: var(--relational-2); }
+[data-family="vital"]      { --accent: var(--vital);      --accent-2: var(--vital-2); }

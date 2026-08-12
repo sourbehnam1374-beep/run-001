@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>SHIVA · Textures · Static & Dynamic</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  body { padding: 18px 22px; }
+  .group { display: flex; flex-direction: column; gap: 8px; }
+  .group + .group { margin-top: 10px; }
+  .k { font: 600 10px/1 var(--font-mono); letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+  .row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .tex {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    height: 50px;
+    display: flex; align-items: center; justify-content: center;
+    font: 10px/1 var(--font-mono); color: var(--muted);
+    background-color: var(--chip);
+    position: relative;
+  }
+  .tex span { background: var(--panel); padding: 2px 6px; border-radius: 4px; border: 1px solid var(--border); }
+</style>
+</head>
+<body>
+  <div class="group">
+    <span class="k">static · grid · tiles · hatch · stripes-45</span>
+    <div class="row">
+      <div class="tex bg-grid"><span>grid</span></div>
+      <div class="tex bg-tiles"><span>tiles</span></div>
+      <div class="tex bg-hatch-thin"><span>hatch-thin</span></div>
+      <div class="tex bg-stripes-45"><span>stripes-45</span></div>
+    </div>
+  </div>
+  <div class="group">
+    <span class="k">dynamic · wave · pulse · bars · stripes-30</span>
+    <div class="row">
+      <div class="tex bg-wave"><span>wave</span></div>
+      <div class="tex bg-pulse"><span>pulse</span></div>
+      <div class="tex bg-bars"><span>bars</span></div>
+      <div class="tex bg-stripes-30"><span>stripes-30</span></div>
+    </div>
+  </div>
+</body>
+</html>

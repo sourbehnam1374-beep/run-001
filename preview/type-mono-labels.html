@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>SHIVA · Mono & Kickers</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  body { padding: 18px 22px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+  .col { display: flex; flex-direction: column; gap: 6px; }
+  .spec { font: 10.5px/1 var(--font-mono); color: var(--muted); letter-spacing: 0.04em; }
+  .kicker { display: inline-block; font: 600 11px/1 var(--font-mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+  .sectnum { display: inline-block; font: 600 11px/1 var(--font-mono); letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+  .mono   { font: 11.5px/1.4 var(--font-mono); color: var(--text); }
+  .micro  { font: 11px/1.4 var(--font-sans); color: var(--muted); }
+  .tag-row { display: flex; gap: 6px; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="col">
+      <span class="spec">kicker · 11 mono · 0.14em</span>
+      <span class="kicker">Clinical Integrity Capsule</span>
+      <span class="spec" style="margin-top:8px;">section-num · 0.18em</span>
+      <span class="sectnum">02 · Universal Trait Semantics</span>
+    </div>
+    <div class="col">
+      <span class="spec">mono · 11.5 / 1.4</span>
+      <span class="mono">JCS · SHA-256 · Merkle</span>
+      <span class="mono">3f8a92c1d7b5e6f2a89c4d31</span>
+      <span class="spec" style="margin-top:6px;">micro · 11 sans · muted</span>
+      <span class="micro">edges muted · no shadow lift</span>
+    </div>
+    <div class="col">
+      <span class="spec">tag pills · 11 sans · 0.02em</span>
+      <div class="tag-row">
+        <span class="tag static">static</span>
+        <span class="tag dynamic">dynamic</span>
+        <span class="tag relational">relational</span>
+        <span class="tag vital">vital</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

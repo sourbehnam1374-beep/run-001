@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>SHIVA · Font Stack</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  body { padding: 22px 26px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .col { display: flex; flex-direction: column; gap: 6px; }
+  .head { font: 650 22px/1 var(--font-sans); letter-spacing: -0.02em; }
+  .head.mono { font: 600 22px/1 var(--font-mono); letter-spacing: 0; }
+  .desc { font: 11px/1.4 var(--font-mono); color: var(--muted); }
+  .stack { font: 11.5px/1.5 var(--font-mono); color: var(--text); }
+  .stack b { color: var(--accent); font-weight: 600; }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="col">
+      <span class="desc">--font-sans</span>
+      <span class="head">SHIVA · Aa Bb 0–9</span>
+      <span class="stack"><b>Inter</b>, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial</span>
+    </div>
+    <div class="col">
+      <span class="desc">--font-mono</span>
+      <span class="head mono">SHIVA · Aa 0123</span>
+      <span class="stack"><b>ui-monospace</b>, SFMono-Regular, Menlo, Consolas, monospace</span>
+    </div>
+  </div>
+</body>
+</html>

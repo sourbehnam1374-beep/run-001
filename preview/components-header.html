@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>SHIVA · Sticky Header</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  body { padding: 0; background: var(--bg); }
+  .shell { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin: 14px 22px; }
+  header.top {
+    background: linear-gradient(180deg, rgba(10,13,18,.97), rgba(10,13,18,.85));
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 16px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .brand-meta { display: flex; flex-direction: column; line-height: 1.2; }
+  .wordmark { font: 650 15px/1 var(--font-sans); letter-spacing: -0.01em; margin: 0; }
+  .sub { font: 11px/1 var(--font-sans); color: var(--muted); margin-top: 3px; letter-spacing: 0.02em; }
+  .right { margin-left: auto; display: flex; gap: 8px; }
+  nav.tabs {
+    display: flex; gap: 6px; padding: 8px 16px;
+    background: var(--panel);
+    border-bottom: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+  <div class="shell">
+    <header class="top">
+      <span class="shiva-logo" style="width:14px;height:14px;"></span>
+      <div class="brand-meta">
+        <h1 class="wordmark">SHIVA</h1>
+        <span class="sub">Studio · v2 · 〰️➰♾️</span>
+      </div>
+      <div class="right">
+        <button class="btn" type="button">Light theme</button>
+        <button class="btn primary" type="button">Anchor</button>
+      </div>
+    </header>
+    <nav class="tabs">
+      <a class="tab active" href="#">Capsules</a>
+      <a class="tab" href="#">Graph</a>
+      <a class="tab" href="#">Vault</a>
+      <a class="tab" href="#">Ledger</a>
+      <a class="tab" href="#">Explorer</a>
+    </nav>
+  </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>SHIVA · Elevation</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  body { padding: 22px 26px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .cell { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .box {
+    width: 220px; height: 64px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+  .rest  { box-shadow: 0 4px 18px rgba(0,0,0,.28); }
+  .hover { box-shadow: 0 14px 45px rgba(0,0,0,.45); border-color: var(--accent); }
+  .label { font: 600 11px/1 var(--font-mono); letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+  .spec  { font: 11px/1.3 var(--font-mono); color: var(--text); text-align: center; }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="cell">
+      <span class="label">--shadow</span>
+      <div class="box rest"></div>
+      <span class="spec">0 4px 18px rgba(0,0,0,.28)</span>
+    </div>
+    <div class="cell">
+      <span class="label">--shadow-hover</span>
+      <div class="box hover"></div>
+      <span class="spec">0 14px 45px rgba(0,0,0,.45) · accent border</span>
+    </div>
+  </div>
+</body>
+</html>

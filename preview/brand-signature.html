@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>SHIVA · Signature</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  body { padding: 22px 26px; }
+  .glyph-row {
+    display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center;
+  }
+  .big {
+    background: var(--capsule-bg);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 18px 24px;
+    text-align: center;
+  }
+  .big .g { font-size: 36px; letter-spacing: 14px; line-height: 1; }
+  .big .m { font-size: 11px; color: var(--muted); margin-top: 8px; letter-spacing: 0.06em; }
+  .legend { display: grid; gap: 6px; }
+  .legend .l { display: flex; gap: 10px; align-items: baseline; font-size: 12px; }
+  .legend .gl { font-size: 18px; width: 24px; text-align: center; }
+  .legend small { color: var(--muted); }
+</style>
+</head>
+<body>
+  <div class="glyph-row">
+    <div class="big">
+      <div class="g">〰️ ➰ ♾️</div>
+      <div class="m">Strings &nbsp;→&nbsp; Ropes &nbsp;→&nbsp; Sheets &nbsp;→&nbsp; Snakes &nbsp;→&nbsp; ∞</div>
+    </div>
+    <div class="legend">
+      <div class="l"><span class="gl">〰️</span> String &nbsp;<small>atomic primitive</small></div>
+      <div class="l"><span class="gl">➰</span> Rope &nbsp;<small>composed bundle</small></div>
+      <div class="l"><span class="gl">♾️</span> Infinity &nbsp;<small>recursive expansion</small></div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>SHIVA · Status Semantic</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  body { padding: 22px 26px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .cell {
+    border: 1px solid var(--border);
+    background: var(--chip);
+    border-radius: 10px;
+    padding: 12px;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .cell .name { font: 650 13px/1 var(--font-sans); }
+  .cell .name.ok   { color: var(--ok); }
+  .cell .name.warn { color: var(--warn); }
+  .cell .name.bad  { color: var(--bad); }
+  .cell .hex { font: 600 10px/1 var(--font-mono); color: var(--muted); letter-spacing: 0.04em; }
+  .pillset { display: flex; gap: 5px; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="cell">
+      <span class="name ok">ok · pass</span>
+      <div class="pillset"><span class="badge ok">pass</span><span class="badge ok">sealed</span><span class="badge ok">confirmed</span></div>
+      <span class="hex">#22C55E · bg @ 0.12</span>
+    </div>
+    <div class="cell">
+      <span class="name warn">warn · pending</span>
+      <div class="pillset"><span class="badge warn">documented</span><span class="badge warn">pending</span><span class="badge warn">inferred</span></div>
+      <span class="hex">#F59E0B · bg @ 0.12</span>
+    </div>
+    <div class="cell">
+      <span class="name bad">bad · violation</span>
+      <div class="pillset"><span class="badge bad">fail</span><span class="badge bad">violation</span><span class="badge bad">broken</span></div>
+      <span class="hex">#EF4444 · bg @ 0.12</span>
+    </div>
+  </div>
+</body>
+</html>

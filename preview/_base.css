@@ -1,0 +1,57 @@
+/* Shared base for all design-system preview cards.
+   Cards are roughly 700×150 with no titles (asset name renders outside). */
+@import url("../colors_and_type.css");
+@import url("../shiva.css");
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 14px/1.5 var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+body { padding: 20px; }
+
+.row  { display: flex; gap: 12px; align-items: center; }
+.col  { display: flex; flex-direction: column; gap: 6px; }
+.wrap { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+
+.swatch {
+  display: flex; flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  min-width: 96px;
+}
+.swatch .chip { height: 56px; }
+.swatch .meta {
+  padding: 6px 8px;
+  background: var(--chip);
+  font: 600 11px/1.1 var(--font-mono);
+}
+.swatch .meta small {
+  display: block;
+  font-weight: 400;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  margin-top: 2px;
+}
+
+.k {
+  font: 600 10px/1 var(--font-mono);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.token {
+  display: flex; flex-direction: column; gap: 4px;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--chip);
+  min-width: 96px;
+  font: 600 11px/1.2 var(--font-mono);
+}
+.token small { color: var(--muted); font-weight: 400; }

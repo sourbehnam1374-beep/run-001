@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>SHIVA · Spacing</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  body { padding: 18px 22px; }
+  .ladder { display: flex; flex-direction: column; gap: 4px; }
+  .step { display: grid; grid-template-columns: 60px 1fr 110px; gap: 12px; align-items: center; font: 11px/1 var(--font-mono); }
+  .step .k { color: var(--text); font-weight: 600; }
+  .step .bar { background: var(--accent); height: 12px; border-radius: 3px; opacity: 0.85; }
+  .step .h { color: var(--muted); text-align: right; }
+</style>
+</head>
+<body>
+  <div class="ladder">
+    <div class="step"><span class="k">--s-1</span><div class="bar" style="width:4px"></div><span class="h">4 · hairline</span></div>
+    <div class="step"><span class="k">--s-2</span><div class="bar" style="width:6px"></div><span class="h">6 · token gap</span></div>
+    <div class="step"><span class="k">--s-3</span><div class="bar" style="width:8px"></div><span class="h">8 · row gap</span></div>
+    <div class="step"><span class="k">--s-4</span><div class="bar" style="width:10px"></div><span class="h">10 · pill pad</span></div>
+    <div class="step"><span class="k">--s-5</span><div class="bar" style="width:12px"></div><span class="h">12 · card pad</span></div>
+    <div class="step"><span class="k">--s-6</span><div class="bar" style="width:14px"></div><span class="h">14 · group gap</span></div>
+    <div class="step"><span class="k">--s-7</span><div class="bar" style="width:18px"></div><span class="h">18 · section pad</span></div>
+    <div class="step"><span class="k">--s-8</span><div class="bar" style="width:22px"></div><span class="h">22 · hero pad x</span></div>
+    <div class="step"><span class="k">--s-9</span><div class="bar" style="width:28px"></div><span class="h">28 · capsule pad</span></div>
+    <div class="step"><span class="k">--s-10</span><div class="bar" style="width:36px"></div><span class="h">36 · big gap</span></div>
+  </div>
+</body>
+</html>

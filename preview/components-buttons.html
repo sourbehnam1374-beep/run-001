@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>SHIVA · Buttons</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  body { padding: 22px 26px; }
+  .row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  .row + .row { margin-top: 10px; }
+  .k { font: 600 10px/1 var(--font-mono); letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); min-width: 90px; }
+  .btn.focus { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .btn.hover { border-color: var(--accent); }
+</style>
+</head>
+<body>
+  <div class="row"><span class="k">default</span>
+    <button class="btn" type="button">Anchor capsule</button>
+    <button class="btn hover" type="button">Hover · border accent</button>
+    <button class="btn focus" type="button">Focus-visible</button>
+  </div>
+  <div class="row"><span class="k">primary</span>
+    <button class="btn primary" type="button">Seal &amp; anchor</button>
+    <button class="btn primary" type="button" style="filter:brightness(1.06)">Hover · brighten</button>
+  </div>
+  <div class="row"><span class="k">disabled</span>
+    <button class="btn" type="button" disabled style="opacity:.4">Anchor capsule</button>
+    <button class="btn primary" type="button" disabled style="opacity:.45">Seal &amp; anchor</button>
+  </div>
+</body>
+</html>

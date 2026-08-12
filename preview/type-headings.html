@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>SHIVA · Display & Heading scale</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  body { padding: 18px 22px; }
+  .row { display: grid; grid-template-columns: 80px 1fr 110px; align-items: baseline; gap: 14px; padding: 4px 0; }
+  .row + .row { border-top: 1px dashed var(--border); padding-top: 8px; margin-top: 4px; }
+  .row .k { color: var(--muted); font: 600 10.5px/1 var(--font-mono); letter-spacing: 0.18em; text-transform: uppercase; }
+  .row .spec { text-align: right; font: 11px/1 var(--font-mono); color: var(--muted); }
+  .h1   { font: 650 38px/1 var(--font-sans); letter-spacing: -0.025em; }
+  .h2   { font: 650 24px/1.1 var(--font-sans); letter-spacing: -0.02em; }
+  .h3   { font: 650 22px/1.15 var(--font-sans); letter-spacing: -0.02em; }
+  .h4   { font: 600 16px/1.2 var(--font-sans); letter-spacing: -0.01em; }
+  .h5   { font: 650 13px/1.2 var(--font-sans); letter-spacing: -0.01em; }
+</style>
+</head>
+<body>
+  <div class="row"><span class="k">hero</span><span class="h1">SHIVA</span><span class="spec">38 · 650 · -0.025em</span></div>
+  <div class="row"><span class="k">h1</span><span class="h2">Pelvic Shape Ratio (R)</span><span class="spec">24 · 650 · -0.02em</span></div>
+  <div class="row"><span class="k">h2</span><span class="h3">The Three-State Figure</span><span class="spec">22 · 650 · -0.02em</span></div>
+  <div class="row"><span class="k">h3</span><span class="h4">Subsection title</span><span class="spec">16 · 600 · -0.01em</span></div>
+  <div class="row"><span class="k">h4 · card</span><span class="h5">Card title</span><span class="spec">13 · 650 · -0.01em</span></div>
+</body>
+</html>

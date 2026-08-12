@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>SHIVA · Form Inputs</title>
+<link rel="stylesheet" href="_base.css">
+<style>
+  body { padding: 22px 26px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; align-items: end; }
+  label { font: 600 10px/1 var(--font-mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; display: block; }
+  input[type="text"], select {
+    width: 100%; box-sizing: border-box;
+    background: var(--chip);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 8px 12px;
+    border-radius: 10px;
+    font: 13px/1.2 var(--font-sans);
+    outline: none;
+  }
+  input[type="text"]:focus, select:focus { border-color: var(--accent); }
+  .check { display: flex; align-items: center; gap: 8px; font-size: 12.5px; }
+  .check input { accent-color: var(--accent); width: 14px; height: 14px; }
+  .seg { display: inline-flex; border: 1px solid var(--border); border-radius: 999px; overflow: hidden; }
+  .seg button { background: var(--chip); color: var(--text); border: 0; padding: 6px 12px; font: 600 11px/1 var(--font-sans); cursor: pointer; }
+  .seg button.on { background: var(--accent); color: #fff; }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div><label>capsule id</label><input type="text" value="cap_pelvic_R_v2" /></div>
+    <div><label>tier</label>
+      <select>
+        <option>confirmed</option>
+        <option>context</option>
+        <option>inferred</option>
+      </select>
+    </div>
+    <div>
+      <label>theme</label>
+      <div class="seg"><button class="on" type="button">Dark</button><button type="button">Light</button></div>
+    </div>
+    <div style="grid-column: 1 / 3;">
+      <label>options</label>
+      <div style="display:flex; gap:14px; padding-top:4px;">
+        <span class="check"><input type="checkbox" checked> seal on save</span>
+        <span class="check"><input type="checkbox"> redact PHI before anchor</span>
+        <span class="check"><input type="checkbox" checked> emit DSSE</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
